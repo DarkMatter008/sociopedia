@@ -1,0 +1,10 @@
+.RightSide{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+.r-button{
+    align-self: center;
+    width: 80%;
+}

@@ -1,0 +1,13 @@
+.Header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: grid;
+    /* grid-template-columns: 18rem auto 20rem; */
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 1.5rem;
+    height: 100%;
+    background: transparent;
+}

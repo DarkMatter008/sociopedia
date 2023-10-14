@@ -1,0 +1,108 @@
+:root {
+  --yellow: #f5c32c;
+  --orange: #fca61f;
+  --blue: #2684e1;
+  --blur: #9169ce;
+  --appBg: #16203f;
+  --fontColor: #ffffff;
+  /* --gred1: #b3ece2;
+  --gred2: #056958; */
+  --gred1: #7cbbe8;
+  --gred2: #5217db;
+  --black: #242d49;
+  --gray: #e6e6e6e6;
+  --profileShadow: 0px 4px 17px 2px #00000040;
+  --hrColor: #cfcdcd;
+  --cardColor: #2d4f6a3b;
+  /* --buttonBg: linear-gradient(98.63deg, #f9a225 0%, #f95f35 100%); */
+  --buttonBg: linear-gradient(98.63deg, #25a1f9 40%, #a027e6 100%);
+  --buttonBgt: linear-gradient(58.63deg, #7b41cc 0%, #3093f5 100%);
+  --inputColor: rgba(70, 87, 101, 0.155);
+  /* --photo: #4CB256;
+  --video: #4A4EB7;
+  --location: #EF5757;
+  --schedule: #E1AE4A; */
+  --photo: #6bf078;
+  --video: #a8abf7;
+  --location: #fbffb2;
+  --schedule: #87bcf2;
+}
+
+.App{
+  overflow: auto;
+  color: var(--black);
+  background: var(--appBg);
+  padding: 0.5rem 1rem 1rem 1rem;
+  color: var(--fontColor);
+  /* grid */
+  /* display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40px 1fr; */
+  gap: 1rem;
+
+}
+.blur{
+  position: absolute;
+  width: 23rem;
+  height: 14rem;
+  border-radius: 50%;
+  background-color: var(--blur);
+  filter: blur(72px);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--buttonBg);
+  color: #ffffff;
+  border-radius: 0.5rem;
+  border: 2px solid var(--buttonBg);
+  margin: 0;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s;
+  padding: 10px 20px;
+  width: fit-content;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  border: 2px solid transparent;
+  pointer-events: none;
+  transition: border-color 0.3s;
+}
+
+.button:hover {
+  background: transparent;
+}
+
+.button:disabled{
+  background: #3180e8;
+  pointer-events: none;
+}
+
+.button:hover::before {
+  border-color: var(--blue);
+}
+
+/* Ensure the button keeps the same size when in focus */
+.button:focus {
+  outline: none;
+}
+
+.button:focus::before {
+  border-color: var(--blue);
+}
+
+::-webkit-scrollbar{
+  display: none;
+}

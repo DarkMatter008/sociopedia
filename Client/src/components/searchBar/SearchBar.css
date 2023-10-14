@@ -1,0 +1,98 @@
+.SearchBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.search{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    justify-content: space-between;
+    background-color: var(--inputColor);
+    border-radius: 20px;
+    padding-left: 8px;
+}
+.search>input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-left: 0.5rem;
+    height: 30px;
+    width: 80%;
+    min-width: 0;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+::placeholder {
+    color: rgba(120, 172, 255, 0.347);
+    opacity: 1;
+  }
+/* .s-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(106.23deg, var(--gred1), var(--gred2) 100%);
+    border-radius: 20px;
+    padding: 5px;
+    height: 40px;
+    width: 31px;
+    color: rgb(8, 9, 67);
+    margin: 0;
+    color: white;
+} */
+.s-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(106.23deg, var(--gred1), var(--gred2) 100%);
+    border: 2px solid linear-gradient(106.23deg, var(--gred1), var(--gred2) 100%);
+    margin: 0;
+    width: 30px;
+    height: 40px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+    color: #ffffff;
+    transition: background-color 0.3s;
+  }
+/* .s-icon:hover{
+    cursor: pointer;
+    color: rgb(24, 5, 110); 
+    background: linear-gradient(106.23deg, var(--gred1), var(--gred2) 100%);
+} */
+.s-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    pointer-events: none;
+    transition: border-color 0.3s;
+  }
+  
+  .s-icon:hover {
+    background: transparent;
+    
+  }
+  
+  .s-icon:hover::before {
+    border-color: var(--blue);
+  }
+  
+  .s-icon:focus {
+    outline: none;
+  }
+  
+  .s-icon:focus::before {
+    border-color: var(--blue);
+  }
+  
